@@ -1,0 +1,23 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+  public function up(): void
+  {
+    Schema::create('evaluations', function (Blueprint $table) {
+      $table->id('evaluation_id');
+      $table->decimal('note')->nullable();
+      $table->integer('semestre')->nullable();
+      $table->timestamps();
+    });
+  }
+
+  public function down(): void
+  {
+    Schema::dropIfExists('evaluations');
+  }
+};
