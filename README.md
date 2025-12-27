@@ -1,60 +1,156 @@
-<div align="center">
+# Gestion Académique – Laravel & Blade
 
-# 🚀 Gestion des etudiants
+## 🚀 Présentation
 
-### A clean, scalable and professional web application
+**Gestion Académique** est une application web développée avec **Laravel** et **Blade** pour la gestion complète d’un établissement académique. Elle permet d’administrer les étudiants, leurs inscriptions, modules, évaluations et bilans de compétences de manière structurée et efficace.
 
-![Status](https://img.shields.io/badge/status-active-success)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Made with](https://img.shields.io/badge/made%20with-love-red)
-
-</div>
+L’application fournit une interface **administrative** pour les gestionnaires et une interface **étudiant** pour suivre ses résultats et modules.
 
 ---
 
-## 📌 Overview
+## Objectifs recherches
 
-**Project Name** est une application conçue pour offrir une solution claire, performante et maintenable.  
-Elle respecte les bonnes pratiques du développement moderne et peut évoluer facilement.
+🎯 OBJECTIF DU SITE
+
+Gérer les étudiants, leurs inscriptions, leurs évaluations, leurs bilans, et les modules / spécialités.
+
+Fournir une interface administrative et une interface utilisateur (étudiants).
+
+## 💡 Fonctionnalités principales
+
+### 🔹 Dashboard Admin
+
+-   Vue synthétique des étudiants, modules, évaluations et bilans
+-   Graphiques de progression académique
+-   Accès rapide aux CRUD
+
+### 🔹 Gestion des utilisateurs
+
+-   Ajouter, modifier, supprimer des étudiants et enseignants
+-   Gestion des rôles et permissions
+-   Authentification sécurisée
+
+### 🔹 Gestion académique
+
+-   Création et gestion des années académiques
+-   Inscription des étudiants aux années (`est_inscrit`)
+-   Suivi du statut des années
+
+### 🔹 Évaluations et bilans
+
+-   Gestion des évaluations par module
+-   Calcul des moyennes par semestre et générale
+-   Suivi des compétences et bilans
+
+### 🔹 Modules et spécialités
+
+-   CRUD complet pour modules et spécialités
+-   Association des spécialités aux étudiants et modules
+
+### 🔹 Bonus
+
+-   Interface étudiant pour consulter ses résultats
+-   Export PDF possible (optionnel)
+-   Graphiques de performance
 
 ---
 
-## 🧠 Features
+## 🏗️ Structure du projet
 
--   ✅ Architecture propre et scalable
--   🔐 Authentification sécurisée
--   ⚡ Performances optimisées
--   📦 Code modulaire et maintenable
--   🌍 Prêt pour la production
-
----
-
-## 🛠️ Tech Stack
-
-**Frontend**
-
--   Blade
--   / Tailwind CSS _(si applicable)_
-
-**Backend**
-
--   Laravel _(selon le projet)_
-
-**Database**
-
--   PostgreSQL /
+app/
+├─ Http/
+│ ├─ Controllers/
+│ └─ Requests/
+├─ Models/
+resources/
+├─ views/ # Templates Blade
+├─ layouts/ # Layouts généraux
+database/
+├─ migrations/ # Migrations Laravel
+routes/
+├─ web.php # Routes web
 
 ---
 
-## 📂 Project Structure
+## ⚡ Installation
+
+1. Cloner le projet
 
 ```bash
-project-name/
-│── src/
-│── public/
-│── config/
-│── routes/
-│── controllers/
-│── models/
-│── README.md
+git clone https://github.com/FrankamDev/gestion-students.git
+cd gestion-students
 ```
+
+2. Installer les dépendances
+
+```bash
+composer install
+npm install
+npm run dev
+```
+
+3. Configurer la base de données
+
+Créer une base PostgreSQL
+
+Copier .env.example en .env
+
+Modifier les variables DB (DB_DATABASE, DB_USERNAME, DB_PASSWORD)
+
+4. Lancer les migrations
+
+php artisan migrate
+
+5. Lancer le serveur
+
+php artisan serve
+
+🧩 # Technologies utilisées
+
+Laravel 12 – Framework PHP
+
+Blade – Moteur de templates Laravel
+
+PostgreSQL – Base de données
+
+Tailwind CSS – (optionnel pour le design)
+
+PHP 8.3
+
+Composer & NPM
+
+🛡️ Sécurité
+
+Authentification via Laravel Breeze
+
+Hashage sécurisé des mots de passe
+
+Gestion des rôles et permissions pour limiter l’accès aux fonctionnalités sensibles
+
+📈 Roadmap
+
+Finaliser les migrations et modèles
+
+Créer les pages CRUD pour chaque entité
+
+Ajouter le dashboard et les graphiques
+
+Implémenter la vue étudiant
+
+Ajouter export PDF et notifications (optionnel)
+
+Tests et validation finale
+
+📁 Contribuer
+
+Fork le projet
+
+Créer une branche :
+
+git checkout -b feature/ma-fonctionnalité
+
+Commit tes changements :
+
+git commit -m "Ajout de ma fonctionnalité"
+
+Push et ouvre une Pull Request
