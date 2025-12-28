@@ -18,10 +18,14 @@ class User extends Authenticatable
    * @var list<string>
    */
   protected $fillable = [
-    'name',
+    'matricule',
+    'nom',
+    'prenom',
     'email',
     'password',
+    'role',
   ];
+  protected $primaryKey = 'user_id';
 
   public function bilans()
   {

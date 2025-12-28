@@ -1,1 +1,1 @@
-<h1>Je suis la</h1>
+@include('components.navbar')

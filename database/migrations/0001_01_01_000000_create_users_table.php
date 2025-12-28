@@ -15,7 +15,7 @@ return new class extends Migration
       $table->string('prenom', 33)->nullable();
       $table->string('email', 50)->nullable();
       $table->char('sexe', 1)->nullable();
-      $table->string('mot_de_passe', 255)->nullable();
+      $table->string('password', 255)->nullable();
       $table->string('role', 20)->nullable();
       $table->timestamps();
     });
