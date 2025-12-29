@@ -20,11 +20,7 @@ return new class extends Migration
       $table->timestamps();
     });
   }
-  public function downed()
-  {
-    $name = "je ne sais pas comment je m'appelle !!!";
-    dd($name);
-  }
+
   public function down(): void
   {
     Schema::dropIfExists('users');
